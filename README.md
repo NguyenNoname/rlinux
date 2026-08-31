@@ -10,4 +10,6 @@ yay:waycal,wlogout,slurp(/w grim),helium browser,lavat,tty-clock,spotify
 
 #note:
 -PM:apps can install by using pacman
+
+
 -yay:"-----------------------"AUR helper 
