@@ -15,4 +15,4 @@ yay: waycal , wlogout , slurp(/w grim) , helium browser , lavat , tty-clock , sp
 -yay:"-----------------------"AUR helper 
 
 
-![Uploading Screenshot_20260831_230604.png…]()
+
