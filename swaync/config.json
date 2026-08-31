@@ -36,8 +36,8 @@
         {
           "label": "󰛨",
           "type": "toggle",
-          "command": "sh -c 'if [ \"$SWAYNC_TOGGLE_STATE\" = \"true\" ]; then busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 4000; else busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500; fi'",
-          "update-command": "sh -c 'if busctl --user get-property rs.wl-gammarelay / rs.wl.gammarelay Temperature | grep -q 4000; then echo true; else echo false; fi'"
+          "command": "sh -c 'pgrep -x wl-gammarelay-rs > /dev/null || wl-gammarelay-rs & sleep 0.2; if [ \"$SWAYNC_TOGGLE_STATE\" = \"true\" ]; then busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 4000; else busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500; fi'",
+          "update-command": "sh -c 'if busctl --user get-property rs.wl-gammarelay / rs.wl.gammarelay Temperature 2>/dev/null | grep -q 4000; then echo true; else echo false; fi'"
         },
         {
           "label": "󰍃",
