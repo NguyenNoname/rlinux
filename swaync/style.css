@@ -1,0 +1,105 @@
+.notification-window {
+    background: transparent;
+    padding: 0px;
+}
+
+.control-center {
+    background: #1e1e2e;
+    border: 2px solid #cba6f7;
+    border-radius: 20px;
+    padding: 16px;
+    color: #cdd6f4;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.control-center-header {
+    padding: 6px;
+    background: transparent;
+    color: #cdd6f4;
+}
+
+.control-center-header title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #cba6f7;
+}
+
+.control-center-header button {
+    background: #181825;
+    border-radius: 8px;
+    color: #cba6f7;
+    border: none;
+    padding: 6px 12px;
+}
+
+.control-center-header button:hover {
+    background: #cba6f7;
+    color: #1e1e2e;
+}
+
+.notification {
+    background: #181825;
+    border-radius: 14px;
+    border: 1px solid #f5c2e7;
+    margin: 8px 0;
+    padding: 12px;
+    color: #cdd6f4;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.notification-default-action {
+    color: #cdd6f4;
+}
+
+.dnd, .volume {
+    background: #181825;
+    border-radius: 12px;
+    padding: 12px;
+    margin: 8px 0;
+    color: #cdd6f4;
+    border: 1px solid rgba(245, 194, 231, 0.2);
+}
+
+.volume trough highlight {
+    background: #cba6f7;
+    border-radius: 6px;
+}
+
+.volume trough {
+    background: #11111b;
+    border-radius: 6px;
+}
+
+.buttons-grid {
+    background: #181825;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid rgba(245, 194, 231, 0.2);
+}
+
+.buttons-grid button {
+    background: #11111b;
+    border-radius: 10px;
+    color: #cdd6f4;
+    min-width: 55px;
+    min-height: 48px;
+    font-size: 20px;
+    margin: 6px;
+    border: 1px solid rgba(245, 194, 231, 0.1);
+}
+
+.buttons-grid button:hover {
+    background: linear-gradient(135deg, #cba6f7 0%, #f5c2e7 100%);
+    color: #1e1e2e;
+    font-weight: bold;
+}
+
+/* Trạng thái bật: Xanh nước biển (#89b4fa) phát sáng */
+.buttons-grid button.active {
+    background: #89b4fa;
+    color: #1e1e2e;
+    font-weight: bold;
+    border: 1px solid #89b4fa;
+    box-shadow: 0 0 12px rgba(137, 180, 250, 0.7);
+}

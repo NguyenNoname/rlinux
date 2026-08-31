@@ -1,0 +1,122 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* --- DOCK CHÍNH GIỮA --- */
+.modules-center {
+    background: #020204;
+    padding: 4px 22px; 
+    border-radius: 30px;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modules-center:hover {
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.9), 0 0 15px rgba(180, 190, 254, 0.15);
+}
+
+#custom-arch, #clock, #workspaces, #network, #battery, #custom-swaync {
+    padding: 0 12px; 
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#custom-arch { color: #89b4fa; font-size: 15px; padding-left: 2px; padding-right: 14px; }
+#clock { color: #cdd6f4; font-size: 13px; padding-right: 14px; }
+#network { color: #f38ba8; font-size: 13px; }    
+#battery { color: #a6e3a1; font-size: 12px; }    
+#custom-swaync { color: #f9e2af; font-size: 13px; } 
+
+#workspaces {
+    background: transparent;
+    padding: 0;
+    margin: 0 4px;
+}
+
+#workspaces button {
+    color: #9399b2; 
+    padding: 2px 12px; 
+    margin: 0 2px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    color: #020204; 
+    background: linear-gradient(135deg, #b4befe 0%, #f38ba8 50%, #f9e2af 100%);
+    font-weight: 900;
+    padding: 2px 20px; 
+    box-shadow: 0 0 8px rgba(243, 139, 168, 0.5);
+}
+
+#workspaces button:hover {
+    color: #cdd6f4;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* --- DOCK PHỤ BÊN PHẢI (SLIDING DRAWER - CÂN BẰNG) --- */
+.modules-right {
+    background: #020204;
+    padding: 4px 12px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modules-right:hover {
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.9), 0 0 15px rgba(137, 180, 250, 0.2);
+}
+
+#tray {
+    padding: 0 8px;
+    margin-right: 4px;
+}
+
+#custom-stat-icon {
+    color: #89b4fa;
+    font-size: 15px;
+    padding: 0 8px;
+    margin: 0 2px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+#custom-stat-icon:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #b4befe;
+}
+
+.stat-item, #cpu, #memory, #temperature, #power-profiles-daemon {
+    padding: 0 8px;
+    margin: 0 2px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+#cpu { color: #89b4fa; }                    
+#power-profiles-daemon { color: #f9e2af; }   
+#temperature { color: #fab387; }             
+#memory { color: #cba6f7; }                  
+
+#cpu:hover, #memory:hover, #temperature:hover, #power-profiles-daemon:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+#custom-arch:hover, #clock:hover, #network:hover, #battery:hover, #custom-swaync:hover {
+    padding-left: 16px;
+    padding-right: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+}
+
+#temperature.critical {
+    color: #f38ba8;
+}

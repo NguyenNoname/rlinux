@@ -1,0 +1,116 @@
+/* --- ROFI SPOTLIGHT CATPPUCCIN RICE --- */
+
+configuration {
+    modi:                       "drun,run,filebrowser";
+    show-icons:                 true;
+    icon-theme:                 "Papirus";
+    font:                       "JetBrainsMono Nerd Font 11";
+    drun-display-format:        "{name}";
+    display-drun:               " ";
+    display-run:                " ";
+    display-filebrowser:        " ";
+}
+
+* {
+    bg:                         #020204;
+    bg-alt:                     #11111b;
+    fg:                         #cdd6f4;
+    accent:                     #89b4fa;
+    select:                     #1e1e2e;
+    border-col:                 #313244;
+    
+    background-color:           transparent;
+    text-color:                 @fg;
+    margin:                     0;
+    padding:                    0;
+}
+
+window {
+    transparency:               "real";
+    location:                   center;
+    anchor:                     center;
+    width:                      620px;
+    enabled:                    true;
+    border-radius:              20px;
+    border:                     2px;
+    border-color:               @accent;
+    background-color:           @bg;
+    cursor:                     "default";
+}
+
+mainbox {
+    enabled:                    true;
+    spacing:                    15px;
+    padding:                    25px;
+    background-color:           transparent;
+    children:                   [ "inputbar", "listview" ];
+}
+
+inputbar {
+    enabled:                    true;
+    spacing:                    12px;
+    padding:                    12px 16px;
+    border-radius:              12px;
+    background-color:           @bg-alt;
+    border:                     1px;
+    border-color:               @border-col;
+    children:                   [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:                    true;
+    background-color:           inherit;
+    text-color:                 @accent;
+    font:                       "JetBrainsMono Nerd Font 12";
+}
+
+entry {
+    enabled:                    true;
+    background-color:           inherit;
+    text-color:                 @fg;
+    cursor:                     text;
+    placeholder:                "Tìm ứng dụng...";
+    placeholder-color:          #6c7086;
+}
+
+listview {
+    enabled:                    true;
+    columns:                    1;
+    lines:                      6;
+    cycle:                      true;
+    dynamic:                    true;
+    scrollbar:                  false;
+    layout:                     vertical;
+    spacing:                    6px;
+}
+
+element {
+    enabled:                    true;
+    spacing:                    12px;
+    padding:                    10px 14px;
+    border-radius:              10px;
+    background-color:           transparent;
+    text-color:                 @fg;
+    cursor:                     pointer;
+}
+
+element selected.normal {
+    background-color:           @select;
+    text-color:                 @accent;
+    border:                     1px;
+    border-color:               @accent;
+}
+
+element-icon {
+    background-color:           transparent;
+    size:                       32px;
+    cursor:                     inherit;
+}
+
+element-text {
+    background-color:           transparent;
+    text-color:                 inherit;
+    cursor:                     inherit;
+    vertical-align:             0.5;
+    horizontal-align:           0.0;
+}

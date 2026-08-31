@@ -1,0 +1,49 @@
+{
+  "positionX": "right",
+  "positionY": "top",
+  "control-center-width": 380,
+  "control-center-margin-top": 10,
+  "control-center-margin-bottom": 10,
+  "control-center-margin-right": 10,
+  "widgets": [
+    "title",
+    "dnd",
+    "volume",
+    "buttons-grid",
+    "notifications"
+  ],
+  "widget-config": {
+    "title": {
+      "text": "Thông báo",
+      "clear-all-button": true,
+      "button-text": "Xóa hết"
+    },
+    "dnd": {
+      "text": "Không làm phiền"
+    },
+    "volume": {
+      "label": "󰕾",
+      "show-per-app": false
+    },
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "󰖩",
+          "type": "toggle",
+          "command": "sh -c 'if [ \"$SWAYNC_TOGGLE_STATE\" = \"true\" ]; then nmcli radio wifi on; else nmcli radio wifi off; fi'",
+          "update-command": "sh -c '[[ $(nmcli radio wifi) == \"enabled\" ]] && echo true || echo false'"
+        },
+        {
+          "label": "󰛨",
+          "type": "toggle",
+          "command": "sh -c 'if [ \"$SWAYNC_TOGGLE_STATE\" = \"true\" ]; then gammastep -O 4000 >/dev/null 2>&1 & else pkill gammastep; fi'",
+          "update-command": "sh -c 'pgrep -x \"gammastep\" > /dev/null && echo true || echo false'"
+        },
+        {
+          "label": "󰍃",
+          "command": "wlogout"
+        }
+      ]
+    }
+  }
+}

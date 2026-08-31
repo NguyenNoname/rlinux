@@ -1,0 +1,113 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 6,
+    "margin-left": 10,
+    "margin-right": 10,
+    "height": 34,
+    
+    "modules-left": [],
+    
+    "modules-center": [
+        "custom/arch",
+        "clock",
+        "ext/workspaces",
+        "network",
+        "battery",
+        "custom/swaync"
+    ],
+    
+    "modules-right": [
+        "tray",
+        "group/stats"
+    ],
+
+    "group/stats": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 400,
+            "children-class": "stat-item",
+            "transition-left-to-right": false,
+            "click-to-reveal": true
+        },
+        "modules": [
+            "custom/stat-icon",
+            "cpu",
+            "memory",
+            "temperature",
+            "power-profiles-daemon"
+        ]
+    },
+
+    "custom/stat-icon": {
+        "format": "󰅁",
+        "tooltip": false
+    },
+
+    "custom/arch": {
+        "format": "󰣇 ",
+        "tooltip": false,
+        "on-click": "rofi -show drun"
+    },
+    "clock": {
+        "format": "{:%H:%M}",
+        "on-click": "pkill waycal || waycal",
+        "tooltip": false
+    },
+    "ext/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "all-outputs": true,
+        "active-only": false,
+        "sort-by-id": true
+    },
+    "network": {
+        "format-wifi": " ",
+        "format-ethernet": "󰈀 ",
+        "format-disconnected": "󰤮 ",
+        "on-click": "networkmanager_dmenu",
+        "tooltip-format": "{essid} ({signalStrength}%)"
+    },
+    "battery": {
+        "format": "{icon}  {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "tooltip-format": "{capacity}% - {time}"
+    },
+    "custom/swaync": {
+        "format": "󰂚 ",
+        "on-click": "swaync-client -t -sw",
+        "tooltip": false
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "interval": 2
+    },
+    "power-profiles-daemon": {
+        "format": "{icon} ",
+        "tooltip-format": "Chế độ: {profile}",
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
+    "temperature": {
+        "thermal-zone": 0,
+        "critical-threshold": 80,
+        "format": "  {temperatureC}°C"
+    },
+    "memory": {
+        "format": "󰘚 {percentage}%",
+        "interval": 2
+    }
+}
