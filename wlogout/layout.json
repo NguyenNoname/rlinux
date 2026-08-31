@@ -1,1 +1,38 @@
-
+[
+    {
+        "label" : "lock",
+        "action" : "hyprlock || swaylock",
+        "text" : "Khóa (L)",
+        "keybind" : "l"
+    },
+    {
+        "label" : "hibernate",
+        "action" : "systemctl hibernate",
+        "text" : "Ngủ đông (H)",
+        "keybind" : "h"
+    },
+    {
+        "label" : "logout",
+        "action" : "hyprctl dispatch exit 0 || loginctl terminate-user $USER",
+        "text" : "Đăng xuất (E)",
+        "keybind" : "e"
+    },
+    {
+        "label" : "shutdown",
+        "action" : "systemctl poweroff",
+        "text" : "Tắt máy (S)",
+        "keybind" : "s"
+    },
+    {
+        "label" : "suspend",
+        "action" : "systemctl suspend",
+        "text" : "Tạm dừng (U)",
+        "keybind" : "u"
+    },
+    {
+        "label" : "reboot",
+        "action" : "systemctl reboot",
+        "text" : "Khởi động lại (R)",
+        "keybind" : "r"
+    }
+]
