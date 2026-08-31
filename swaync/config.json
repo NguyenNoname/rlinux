@@ -36,8 +36,8 @@
         {
           "label": "󰛨",
           "type": "toggle",
-          "command": "sh -c 'if [ \"$SWAYNC_TOGGLE_STATE\" = \"true\" ]; then gammastep -O 4000 >/dev/null 2>&1 & else pkill gammastep; fi'",
-          "update-command": "sh -c 'pgrep -x \"gammastep\" > /dev/null && echo true || echo false'"
+          "command": "sh -c 'if [ \"$SWAYNC_TOGGLE_STATE\" = \"true\" ]; then busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 4000; else busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500; fi'",
+          "update-command": "sh -c 'if busctl --user get-property rs.wl-gammarelay / rs.wl.gammarelay Temperature | grep -q 4000; then echo true; else echo false; fi'"
         },
         {
           "label": "󰍃",
