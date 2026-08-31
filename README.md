@@ -16,4 +16,4 @@ yay: waycal , wlogout , slurp(/w grim) , helium browser , lavat , tty-clock , sp
 
 
 
-![Tên mô tả ảnh](đường_dẫn_ảnh)
+![My Desktop rice](https://github.com/NguyenNoname/rlinux/blob/main/Screenshot_20260831_230604.png)
